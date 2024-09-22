@@ -1,0 +1,17 @@
+{
+    "name": "travel_recommendation",
+    "version": "1.0.0",
+    "main": "travel_recommendation.js",
+    "devDependencies": {
+        "@11ty/eleventy": "^2.0.1"
+    },
+    "scripts": {
+        "start": "eleventy --serve --incremental",
+        "build": "eleventy",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}
