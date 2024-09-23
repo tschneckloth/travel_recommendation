@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <script src="/public/assets/js/travel_recommendation.js"></script>
+    </head>
+    <body>
+        {% include "nav.html" %}
+
+        <div class="container-fluid">
+            <div class="row justify-content-start">
+                <div class="col-xl-1 col-md-2 col-sm-12">
+                    <div class="d-flex flex-column gap-3 mt-4 icons">
+                        <!-- Facebook -->
+                        <a href="#" class="btn btn-lg btn-floating">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a href="#" class="btn btn-lg btn-floating">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="#" class="btn btn-lg btn-floating">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="#" class="btn btn-lg btn-floating">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="#" class="btn btn-lg btn-floating">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                        <!-- Pinterest -->
+                        <a href="#" class="btn btn-lg btn-floating">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-10 col-sm-12">
+                    <div class="overlay mt-4">
+                        <div class="banner">{{ content | safe }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="/assets/js/travel_recommendation.js"></script>
+    </body>
+</html>

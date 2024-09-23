@@ -1,0 +1,78 @@
+/* General Styles */
+:root {
+    --overlay-bg-color: rgb(255, 255, 255, 0.9);
+    --base-font-size: 16px;
+    --scale-factor: 1;
+}
+
+body,
+html {
+    color: white;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    font-size: calc(var(--base-font-size) * var(--scale-factor));
+    font-family: Arial, sans-serif;
+    background-image: url("/assets/img/homepage_banner_v6.jpg"); /* Correct path to your image */
+    height: 100vh; /* Full height of the viewport */
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Bootstrap Navbar Adjustment */
+.navbar {
+    z-index: 20; /* Ensure the navbar stays above other elements */
+}
+
+.banner h1 {
+    font-family: fantasy;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, calc(1rem + 3vw), 5rem);
+    line-height: 1.2;
+}
+
+.rotate-45 {
+    display: inline-block;
+    transform: rotate(290deg);
+}
+
+.banner button {
+    text-transform: uppercase;
+}
+
+.icons .btn {
+    background-color: var(--overlay-bg-color);
+}
+
+.overlay {
+    color: rgb(66, 11, 11);
+    background-color: var(--overlay-bg-color);
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+.container {
+    --max-width: 1200px;
+    --padding: calc(20px * var(--scale-factor));
+
+    max-width: var(--max-width);
+    padding: var(--padding);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --scale-factor: 0.9;
+    }
+
+    .container {
+        --max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --scale-factor: 0.8;
+    }
+}
