@@ -1,0 +1,14 @@
+{
+    "images": [
+        { "src": "/assets/img/angkor-kh.webp", "alt": "Angkor" },
+        { "src": "/assets/img/bora-pf.webp", "alt": "Bora Bora" },
+        { "src": "/assets/img/copa-br.webp", "alt": "Copacabana" },
+        { "src": "/assets/img/kyoto-jp.webp", "alt": "Kyoto" },
+        { "src": "/assets/img/melbourne-au.webp", "alt": "Melbourne" },
+        { "src": "/assets/img/rio-br.webp", "alt": "Rio" },
+        { "src": "/assets/img/sao-br.webp", "alt": "Sao Paulo" },
+        { "src": "/assets/img/sydney-au.webp", "alt": "Sydney" },
+        { "src": "/assets/img/taj-in.webp", "alt": "Taj Mahal" },
+        { "src": "/assets/img/tokyo-jp.webp", "alt": "Tokyo" }
+    ]
+}

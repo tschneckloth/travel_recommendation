@@ -1,45 +1,21 @@
 {% extends "layouts/base.html" %}
 
 <!-- -->
-{% block content %}
-<div class="row justify-content-start">
-    <div class="col-xl-1 col-md-2 col-sm-12">
-        <div class="d-flex flex-column gap-3 mt-4 icons">
-            <!-- Facebook -->
-            <a href="#" class="btn btn-lg btn-floating">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <!-- Twitter -->
-            <a href="#" class="btn btn-lg btn-floating">
-                <i class="fab fa-twitter"></i>
-            </a>
-
-            <!-- Instagram -->
-            <a href="#" class="btn btn-lg btn-floating">
-                <i class="fab fa-instagram"></i>
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="#" class="btn btn-lg btn-floating">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            <!-- YouTube -->
-            <a href="#" class="btn btn-lg btn-floating">
-                <i class="fab fa-youtube"></i>
-            </a>
-
-            <!-- Pinterest -->
-            <a href="#" class="btn btn-lg btn-floating">
-                <i class="fab fa-pinterest"></i>
-            </a>
-        </div>
+{% block banner %}
+<div class="row">
+    <div class="overlay mt-4 col-xl-4">
+        <div class="banner">{{ content | safe }}</div>
     </div>
-
-    <div class="col-xl-4 col-md-10 col-sm-12">
-        <div class="overlay mt-4">
-            <div class="banner">{{ content | safe }}</div>
+    <div id="destinations" class="mt-4 col-xl-8">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            {% for img in images.images %}
+            <div class="col overlay">
+                <img src="{{ img.src }}" alt="Angkor" class="img-fluid rounded" />
+                <div class="my-2"><strong>{{ img.alt }}</strong></div>
+                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
+                <button class="rounded w-25">Visit</button>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

@@ -26,10 +26,26 @@ html {
     z-index: 20; /* Ensure the navbar stays above other elements */
 }
 
-.banner h1 {
+.navbar-nav {
+    flex: 1;
+    justify-content: center;
+}
+
+input[type="search"] {
+    width: 325px;
+}
+
+h1 {
     font-family: fantasy;
     text-transform: uppercase;
     font-size: clamp(1.5rem, calc(1rem + 3vw), 5rem);
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: fantasy;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, calc(1rem + 3vw), 3rem);
     line-height: 1.2;
 }
 
@@ -51,6 +67,10 @@ html {
     background-color: var(--overlay-bg-color);
     padding: 1rem;
     border-radius: 7px;
+}
+
+#destinations .overlay {
+    border: 1px solid rgb(87, 71, 1);
 }
 
 .container {
