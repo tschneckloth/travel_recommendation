@@ -49,6 +49,10 @@ h2 {
     line-height: 1.2;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .rotate-45 {
     display: inline-block;
     transform: rotate(290deg);
