@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
         <link rel="stylesheet" href="/assets/css/styles.css" />
-        <script src="/public/assets/js/travel_recommendation.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,9 +32,9 @@
             </ul>
             
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Enter a destination or keyword" aria-label="Search" />
-                <button class="btn btn-info" type="submit">Search</button>
-                <button class="btn btn-secondary ms-1" type="submit">Clear</button>
+                <input id="search" class="form-control me-2" type="search" placeholder="Enter a destination or keyword" aria-label="Search" />
+                <button id="btnSearch" class="btn btn-info" type="submit">Search</button>
+                <button id="btnClear" class="btn btn-secondary ms-1" type="submit">Clear</button>
             </form>
             
         </div>
@@ -89,80 +88,8 @@
 <button class="btn btn-primary py-2 px-4">Book Now</button>
 </div>
     </div>
-    <div id="destinations" class="mt-4 col-xl-8">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-            
-            <div class="col overlay">
-                <img src="/assets/img/angkor-kh.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Angkor</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/bora-pf.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Bora Bora</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/copa-br.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Copacabana</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/kyoto-jp.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Kyoto</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/melbourne-au.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Melbourne</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/rio-br.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Rio</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/sao-br.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Sao Paulo</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/sydney-au.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Sydney</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/taj-in.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Taj Mahal</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-            <div class="col overlay">
-                <img src="/assets/img/tokyo-jp.webp" alt="Angkor" class="img-fluid rounded" />
-                <div class="my-2"><strong>Tokyo</strong></div>
-                <div class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, velit consequuntur libero aliquam eum quae labore est nihil officia quam vel dolore modi similique quidem autem, tempore corrupti rerum. Laudantium!</div>
-                <button class="rounded w-25">Visit</button>
-            </div>
-            
-        </div>
+    <div class="mt-4 col-xl-8">
+        <div id="destinations" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3"></div>
     </div>
 </div>
 </div>
