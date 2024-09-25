@@ -7,13 +7,17 @@
         "gh-pages": "^6.1.1"
     },
     "scripts": {
-        "start": "eleventy --serve --incremental",
-        "build": "eleventy",
+        "start": "cross-env ELEVENTY_ENV=development eleventy --serve --incremental",
+        "build": "cross-env ELEVENTY_ENV=production eleventy",
         "deploy": "gh-pages -d ./docs",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "description": ""
+    "description": "",
+    "dependencies": {
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.4.5"
+    }
 }

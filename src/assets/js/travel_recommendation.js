@@ -1,7 +1,15 @@
 let locations;
 
+let assetUrl;
+
+if (window.location.hostname === "localhost") {
+    assetUrl = "http://localhost:8080/assets";
+} else {
+    assetUrl = "https://tschneckloth.github.io/travel_recommendation/assets";
+}
+
 document.addEventListener("DOMContentLoaded", (e) => {
-    const jsonUrl = "/assets/json/travel_recommendation_api.json";
+    const jsonUrl = `${assetUrl}/json/travel_recommendation_api.json`;
 
     fetch(jsonUrl)
         .then((response) => response.json())
