@@ -69,7 +69,7 @@ function genDestinationHtml({ name, imageUrl, description, timezone }) {
     destination.className = "col overlay";
 
     const img = document.createElement("img");
-    img.src = `/assets/img/${imageUrl}`;
+    img.src = `${baseUrl}/assets/img/${imageUrl}`;
     img.alt = name;
     img.className = "img-fluid rounded";
 
@@ -106,7 +106,7 @@ function displayMatches(results) {
     clearResults();
 
     if (results.length < 1) {
-        alert("Oops! Nothing matching your search was found.");
+        alert("Oops! Nothing matching your search was found");
     }
 
     results.forEach((result) => {
