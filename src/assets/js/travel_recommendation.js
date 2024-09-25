@@ -1,15 +1,15 @@
 let locations;
 
-let assetUrl;
+let baseUrl;
 
 if (window.location.hostname === "localhost") {
-    assetUrl = "http://localhost:8080/assets";
+    baseUrl = "http://localhost:8080";
 } else {
-    assetUrl = "https://tschneckloth.github.io/travel_recommendation/assets";
+    baseUrl = "https://tschneckloth.github.io/travel_recommendation";
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-    const jsonUrl = `${assetUrl}/json/travel_recommendation_api.json`;
+    const jsonUrl = `${baseUrl}/assets/json/travel_recommendation_api.json`;
 
     fetch(jsonUrl)
         .then((response) => response.json())
